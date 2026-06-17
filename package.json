@@ -1,0 +1,13 @@
+{
+  "name": "lecture-auto-portable",
+  "version": "1.0.0",
+  "description": "edukisa 강의 자동 수강 (포터블, 자격증명 직접 입력)",
+  "private": true,
+  "scripts": {
+    "start": "bash start.sh",
+    "stop": "bash stop.sh"
+  },
+  "dependencies": {
+    "playwright-core": "^1.61.0"
+  }
+}

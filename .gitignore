@@ -1,0 +1,10 @@
+node_modules/
+chrome-profile/
+captures/
+exam_questions/
+progress.log
+session.log
+status.json
+supervisor.pid
+DONE
+schedule.md
