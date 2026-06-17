@@ -51,3 +51,9 @@ COURSE_URL="https://corp.edukisa.or.kr/service/em/page/my_class_std.do?...." ./s
 ## 파일
 - `run.js` 수강 로직 / `supervisor.sh` 감시자 / `load-creds.sh` 자격증명 로드
 - `setup.sh` 설치 / `start.sh` 시작 / `stop.sh` 중지 / `forget-creds.sh` 키체인 삭제
+
+## 진행상황 보기 (verbose 대시보드)
+```bash
+./watch.sh        # 또는 node watch.js  (실시간 갱신, Ctrl+C 종료)
+tail -f progress.log   # 단순 로그 스트림
+```
