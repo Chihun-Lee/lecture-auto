@@ -15,12 +15,12 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 echo "· node $(node -v)"
 
-# 2) Chrome 확인 (없으면 brew로 설치 시도)
-if [ ! -d "/Applications/Google Chrome.app" ]; then
+# 2) 브라우저 확인 — Aside(우선) 또는 Chrome (없으면 brew로 Chrome 설치 시도)
+if [ ! -d "/Applications/Aside.app" ] && [ ! -d "/Applications/Aside 2.app" ] && [ ! -d "/Applications/Google Chrome.app" ]; then
   if command -v brew >/dev/null 2>&1; then echo "· Google Chrome 설치 중..."; brew install --cask google-chrome;
   else echo "✗ Google Chrome 필요 → https://www.google.com/chrome 설치 후 다시 실행"; exit 1; fi
 fi
-echo "· Google Chrome OK"
+echo "· 브라우저 OK (Aside 우선, 없으면 Chrome)"
 
 # 3) 코드 받기/갱신
 if [ -d "$DIR/.git" ]; then echo "· 기존 코드 갱신($DIR)"; git -C "$DIR" pull --ff-only || true;

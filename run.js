@@ -207,7 +207,7 @@ const fmtDur = (ms) => { const m = Math.floor(ms / 60000), s = Math.round((ms % 
 
   sessionLog('프로세스 시작');
   const ctx = await chromium.launchPersistentContext(PROFILE_DIR, {
-    headless: true, channel: 'chrome', viewport: { width: 1280, height: 900 },
+    headless: true, ...require('./browser').launchOpts, viewport: { width: 1280, height: 900 },
   });
   await ctx.addInitScript(() => {
     Object.defineProperty(document, 'hidden', { get: () => false, configurable: true });
