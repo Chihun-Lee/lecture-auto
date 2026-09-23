@@ -9,12 +9,10 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 echo "✓ node $(node -v)"
 
-if [ -d "/Applications/Aside.app" ] || [ -d "/Applications/Aside 2.app" ]; then
-  echo "✓ Aside 브라우저 설치됨 (우선 사용)"
-elif [ -d "/Applications/Google Chrome.app" ]; then
+if [ -d "/Applications/Google Chrome.app" ]; then
   echo "✓ Google Chrome 설치됨"
 else
-  echo "✗ Aside 또는 Google Chrome 이 필요합니다. https://www.google.com/chrome 에서 설치 후 다시 실행하세요."
+  echo "✗ Google Chrome 이 필요합니다. https://www.google.com/chrome 에서 설치 후 다시 실행하세요."
   exit 1
 fi
 
